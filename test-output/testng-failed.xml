@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="3" parallel="tests" name="Failed suite [TestNG Regression Suite]" guice-stage="DEVELOPMENT" verbose="3">
+  <test thread-count="3" parallel="tests" name="Google Test(failed)" verbose="3">
+    <parameter name="browser" value="chrome"/>
+    <parameter name="url" value="https://www.google.com"/>
+    <classes>
+      <class name="mytests.GoogleTest">
+        <methods>
+          <include name="googleURLTest"/>
+          <include name="setup"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- mytests.GoogleTest -->
+    </classes>
+  </test> <!-- Google Test(failed) -->
+  <test thread-count="3" parallel="tests" name="OpenCart Test(failed)" verbose="3">
+    <parameter name="browser" value="edge"/>
+    <parameter name="url" value="https://naveenautomationlabs.com/opencart"/>
+    <classes>
+      <class name="mytests.OpenCartTest">
+        <methods>
+          <include name="setup"/>
+          <include name="openCartURLTest"/>
+          <include name="tearDown"/>
+          <include name="openCartTitleTest"/>
+        </methods>
+      </class> <!-- mytests.OpenCartTest -->
+    </classes>
+  </test> <!-- OpenCart Test(failed) -->
+  <test thread-count="3" parallel="tests" name="Amazon Test(failed)" verbose="3">
+    <parameter name="browser" value="firefox"/>
+    <parameter name="url" value="https://www.amazon.com"/>
+    <classes>
+      <class name="mytests.AmazonTest">
+        <methods>
+          <include name="setup"/>
+          <include name="tearDown"/>
+          <include name="amazonURLTest"/>
+          <include name="amazonTitleTest"/>
+        </methods>
+      </class> <!-- mytests.AmazonTest -->
+    </classes>
+  </test> <!-- Amazon Test(failed) -->
+</suite> <!-- Failed suite [TestNG Regression Suite] -->
